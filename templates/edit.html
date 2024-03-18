@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<br>
+<h1 class="reg" >Edit your article</h1>
+
+<form method="POST">
+ <br>
+ <div>
+  <h5 style="color:#0960ec">Title:</h5>
+  <input name="title" id="title" class="form-control" value="{{article.title}}"></input>
+ </div>
+ <br />
+ <br>
+ <div>
+  <h5 style="color:#0960ec">Bodytext:</h5>
+  <textarea name="bodytext" id="bodytext" class="form-control">{{article.bodytext}}</textarea>
+ </div>
+ <br />
+ <div align="center">
+  <button type="submit" class="btn btn-lg btn-primary">Publish</button>
+ </div>
+</form>
+<br />
+<div align="center">
+ <a href="/home"><button type="button" class="btn btn-lg btn-secondary">BACK</button></a>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="reg">
+	<h3>Register Now</h3>
+</div>
+
+<form class="forms" action= "{{url_for('Users.register')}}" method="post" method="" id="register">
+
+<div>
+	<label for="firstname"></label>First Name:</label>
+</div>
+<div>
+	<input type="text" id="firstname" name="firstname" required>
+</div>
+<br>
+
+
+<div>
+	<label for="lastname"></label>Last Name:</label>
+</div>
+<div>
+	<input type="lastname" id="lastname" name="lastname" required>
+</div>
+<br>
+
+
+
+			<div>
+				<label for="email"></label>Email:</label>
+			</div>
+		<div>
+			<input type="email" id="email" name="email" required>
+		</div>
+		<br>
+
+	
+		<div>
+			<label for="Phone number"></label>Phone Number:</label>
+		</div>
+	
+		<div>
+			<input type="tel" id="phone number" name="phone number"
+				required>
+		</div>
+		<br>
+
+		<div>
+			<label for="username">Username:</label>
+		</div>
+	
+		<div>
+			<input type="text" id="username" name="username" required>
+		</div>
+		<br>
+	
+	
+		<div>
+			<label for="password">Password(Minimum of 8 characters):</label>
+		</div>
+	
+		<div>
+			<input type="password" id="password" name="password" minlength="8" required>
+		</div>
+		<br>
+	
+		<div>
+			<label for="name">Confirm Password:</label>
+		</div>
+	
+		<div>
+			<input type="password" id="confirm_password" name="confirm_password" minlength="8" required>
+		</div>
+		<br>
+		<div>
+			<button>Submit</button>
+		</div>
+	
+	
+	</form>
+
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<form method="POST">
+	<br>
+	<h1 class="reg"> HELLO THERE!</h1>
+	<div class="form-group">
+		<fieldset>
+			<label for="email"> EMAIL:</label>
+			<input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" required>
+		</fieldset>
+		<br>
+		<fieldset>
+			<label for="password"> PASSWORD:</label>
+			<input type="password" name="password" id="password" class="form-control" placeholder="Enter Password"
+				required>
+		</fieldset>
+		<br>
+		<fieldset align="center">
+			<button type="submit" id="button" class="button">SUBMIT</button>
+		</fieldset>
+	</div>
+</form>
+{% endblock %}

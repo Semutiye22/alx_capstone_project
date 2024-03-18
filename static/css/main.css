@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+}
+
+.navbar {
+	position: absolute;
+	top: 0;
+	left: 0%;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 10px;
+	color: whitesmoke;
+}
+
+.logo {
+	font-size: 32px;
+	color: rgb(185, 3, 49);
+	margin-left: 96px;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	justify-items: space-around;
+	margin-right: 96px;
+}
+
+.nav-link li {
+	margin: 0 20px;
+	color: rgb(94, 1, 24);
+}
+
+.nav-link a:hover {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-weight: bold;
+	background-color: rgb(185, 3, 49);
+	padding: 8px 20px;
+	border-radius: 10px;
+}
+
+header {
+	background-color: bisque;
+	height: 10vh;
+	width: 100vw;
+	background-position: bottom;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.reg {
+	margin-top: 64px;
+	font-size: 24px;
+	margin-left: 11%;
+	color: rgb(185, 3, 49);
+}
+
+.reg p{
+	font-size: 16px;
+	color: rgb(94, 1, 24);
+	line-height: 32px;
+}
+
+form {
+	margin-top: 32px;
+	padding-left: 80px;
+	color: rgb(94, 1, 24);
+}
+
+button {
+	padding: 2px 30px;
+	font-size: 3vmin;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	background-color: rgb(185, 3, 49);
+	color: white;
+	width: 80%;
+	height: 40px;
+	margin-bottom: 32px;
+}
+
+form input {
+	width: 80%;
+	height: 40px;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+}
+
+.txt{
+	width: 80%;
+	height: 150px;
+	outline: 2px;
+	border-radius: 4px;
+}
+
+.txts{
+	width: 80%;
+	height: 40px;
+}
+
+/* a:hover {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-weight: bold;
+	background-color: rgb(185, 3, 49);
+	padding: 8px 20px;
+	border-radius: 10px;
+} */
+
+.username {
+	text-decoration: none;
+
+}
+
+.drop {
+	display: flex;
+	justify-content: space-around;
+	width: 32px;
+	padding: 2px 30px;
+}
+
+
+.title {
+font-size: 20px;
+}
+
+.card-text {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.btn-group {
+		display: block;
+		justify-items: space-around;
+}
+
+.btn {
+		border-radius: 10px;
+		outline: none;
+		border: none;
+		background-color: rgb(185, 3, 49);
+		color: white;
+		width: 20%;
+		height: 40px;
+		/* margin-bottom: 32px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile device */
+@media only screen and (max-width:850px) {
+
+	.navbar {
+		padding: 0;
+		padding-top: 90px;
+	}
+
+	.logo {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+	}
+
+	.nav-link {
+		flex-direction: column;
+		width: 100%;
+		height: 10vh;
+		justify-content: center;
+		background-color: bisque;
+
+	}
+
+	.mobile-menu {
+		margin-top: 0px;
+	}
+
+	.nav-link li {
+		margin: 10px auto;
+	}
+
+	header {
+			background-color: bisque;
+				height: 35vh;
+				width: 100vw;
+				background-position: bottom;
+				background-size: cover;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+	}
+
+	section {
+		padding-top: 20px;
+	}
+
+.reg{
+	margin-top: 50px;
+}
+
+form input {
+	width: 80%;
+	height: 40px;
+	/* background-color: rgb(255, 254, 254); */
+	border-radius: 4px;
+	/* border-color: rgb(255, 162, 162); */
+	/* outline: 0; */
+	display: flex;
+	justify-content: center;
+
+}
+}
+
+
+
+
+

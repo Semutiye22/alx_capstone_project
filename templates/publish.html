@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+{% block title %}index{% endblock %}
+{% block content %}
+
+<div class="reg">
+	<h3>Publish your article</h3>
+</div>
+
+
+<form class="forms" action="{{url_for('aven.publish')}}"method="POST">
+	<div>
+		<h5><label for="title">Title:</label></h5>
+	</div>
+
+	<div>
+		<input type="text" id="title" name="title" required>
+	</div>
+	<br>
+
+<div class="">
+	<h5 >Text:</h5>
+	<textarea name="bodytext" id="result" class="txt" placeholder="Type here..."></textarea>
+</div>
+ <br>
+	<br>
+
+	<div>
+		<button>Publish</button>
+	</div>
+	<br>
+
+</form>
+
+{% endblock content %}
+
+
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel=stylesheet type=text/css href="{{ url_for('static',
+    filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Blog</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="logo">Blog</h1>
+      <li class="nav-link">
+        <form action="" method="GET">
+            <input type="text" name="query" placeholder="Search...">
+            <!-- <button type="submit">Search</button> -->
+        </form>
+    </li>
+      <ul class="nav-link">
+          <li class="active"><a href="{{ url_for('aven.index') }}">Home</a></li>
+          <li><a href="{{ url_for('aven.publish') }}">Publish</a></li>
+          {% if current_user.is_authenticated %}
+              <li><a id="logout" href="{{ url_for('Users.logout') }}">Logout</a></li>
+          {% else %}
+              <li><a href="{{ url_for('Users.register') }}">Register</a></li>
+              <li><a id="login" href="{{ url_for('Users.login') }}">Login</a></li>
+          {% endif %}
+        
+      </ul>
+  </nav>
+  
+    </nav>
+    <header>
+      <div class="header-content"></div>
+    </header>
+
+    <main>
+      <div class="container">
+        {% with errors = get_flashed_messages(category_filter=["error"]) %} {%
+        if errors %}
+        <div
+          id="failure"
+          class="alert alert-danger alert-dismissible fade show"
+          role="alert"
+          data-bs-dismiss="alert"
+          align="center"
+        >
+          {{ messages }} {% for message in errors %} {{ message }} {% endfor %}
+        </div>
+        {% endif %} {% endwith %} {% with success =
+        get_flashed_messages(category_filter=["success"]) %} {% if success %}
+        <div
+          class="alert alert-success alert-dismissible fade show"
+          role="alert"
+          data-bs-dismiss="alert"
+          align="center"
+        >
+          {{ messages }} {% for message in success %} {{ message }} {% endfor %}
+        </div>
+        {% endif %} {% endwith %}
+      </div>
+
+      <div class="container">{% block content %}{% endblock %}</div>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        type="text/javascript"
+        src="{{ url_for('static', filename='index.js')}}"
+      ></script>
+    </main>
+  </body>
+</html>
